@@ -10,3 +10,13 @@ def sum_eq_n?(arr, n)
   return true if arr.empty? && n == 0
   arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
 end
+each_with_object
+
+def clean_string(str)
+  str
+    .chars
+    .each_with_object([]) { |ch, obj| ch == "#" ? obj.pop : obj << ch }
+    .join
+end
+clean_string("aaa#b")
+
