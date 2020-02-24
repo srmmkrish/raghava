@@ -4,3 +4,9 @@ def get_numbers(list, index = 0, taken = [])
   get_numbers(list, index+1, taken + [list[index]])
 end
 get_numbers([1,2,3])
+sum of two numbers
+
+def sum_eq_n?(arr, n)
+  return true if arr.empty? && n == 0
+  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
+end
